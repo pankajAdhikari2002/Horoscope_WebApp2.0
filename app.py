@@ -57,7 +57,7 @@ def info(astro_sign, name):
     data = today_data[astro_sign.title()]
     return render_template("infopage.html", astro_sign=astro_sign, data=data, name=name)
 
-@app.route("/runScriptCopy@728")
+@app.route("/runScript{UNIQUE}") # Add yours in place of UNIQUE
 def runScript():
     global today_data
     script.runScript()
